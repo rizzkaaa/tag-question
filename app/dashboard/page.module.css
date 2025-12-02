@@ -1,0 +1,182 @@
+.wrapImage {
+  position: relative;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+/* HEADER LOGO */
+.logo div:first-child {
+  display: flex;
+  align-items: flex-end;
+  transform: translateX(-50px);
+}
+.logo p:first-child {
+  font-size: 130px;
+  padding: 0;
+  margin: 0;
+  transform: translateY(30px);
+}
+.logo p:last-child {
+  font-size: 100px;
+}
+.logo p {
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.logo .wrapImage {
+  width: 160px;
+  height: 200px;
+}
+
+/* HEADER BUTTON */
+.actionBtn {
+  margin-block: 20px;
+}
+.actionBtn .a,
+.actionBtn a {
+  font-size: 25px;
+  line-height: 1;
+  border-radius: 20;
+  margin: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+.actionBtn .a {
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+}
+.actionBtn a {
+  box-shadow: inset 3px 3px 3px rgba(211, 212, 212, 0.45),
+    inset -3px -3px 3px rgba(211, 212, 212, 0.45);
+  background-color: #e6b325;
+}
+
+/* HEADER GREETINGS */
+.greetings {
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* TEAM */
+.team {
+  padding: 50px 50px 80px;
+  width: 100%;
+  margin-block: 30px;
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+}
+
+/* TEAM H1 */
+.team h1 {
+  font-size: 50;
+  text-align: center;
+  color: #e6b325;
+  text-shadow: 3px 3px 6px #e6b325;
+  margin-bottom: 30px;
+}
+
+/* TEAM CARD TEAM */
+.team .wrapCard {
+  display: flex;
+  justify-content: space-around;
+}
+.team .cardTeam {
+  width: 35%;
+  background-color: white;
+  border-radius: 50px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 6px 6px 7px rgba(161, 168, 168, 0.45),
+    inset -10px -10px 10px rgba(175, 182, 182, 0.45),
+    8px 8px 10px rgba(161, 168, 168, 0.45), 20px 20px 1px #d9d9d9;
+}
+.team .wrapImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.team .cardTeam p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 20;
+  margin: 5px;
+  padding: 10px 20px;
+  color: #e6b325;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+}
+
+.team .cardTeam p:not(:last-child) {
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer:last-child {
+  border-top: 4px solid transparent;
+  border-radius: 40;
+  width: 90%;
+  padding-top: 20px;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #ff00cc, #3333ff) border-box;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+footer .logo {
+  margin-right: 10px;
+}
+footer .logo p:first-child {
+  font-size: 50px;
+  transform: translateY(15px);
+}
+footer .logo p:last-child {
+  font-size: 40px;
+}
+footer .logo .wrapImage {
+  width: 80px;
+  height: 100px;
+}
+
+footer .line {
+  width: 2px;
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+  height: 100%;
+  margin-inline: 10;
+}
+.container footer span {
+  margin-bottom: 10px;
+  margin-right: 5;
+  font-size: 20;
+  display: inline-block;
+}
+footer .p {
+  font-size: 25px;
+}
