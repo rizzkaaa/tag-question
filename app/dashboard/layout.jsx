@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaRobot } from "react-icons/fa";
 import styles from "./layout.module.css";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -64,7 +64,10 @@ export default function Home({ children }) {
                   }`}
                   key={index}
                 >
-                  <Link className={`${styles.a} ${tenali_Ramakrishna.className}`} href={menu.pathName}>
+                  <Link
+                    className={`${styles.a} ${tenali_Ramakrishna.className}`}
+                    href={menu.pathName}
+                  >
                     {menu.label}
                   </Link>
                 </div>
@@ -77,15 +80,23 @@ export default function Home({ children }) {
       <main className={styles.main}>
         <div className={styles.firstLayer}>
           <div className={styles.secondLayer}>
-            <div className={styles.toggleMenu}>
-              <button className={`${styles.toggleBtn} ${tenali_Ramakrishna.className}`} onClick={toggleSidebar}>
-                <FaChevronDown
-                  className={`${
-                    open ? styles.closeToggle : styles.openToggle
-                  } ${styles.toggleIcon}`}
-                />
-                {open ? "Close" : "Open"} Menu
-              </button>
+            <div className={styles.wrap}>
+              <div className={styles.toggleMenu}>
+                <button
+                  className={`${styles.toggleBtn} ${tenali_Ramakrishna.className}`}
+                  onClick={toggleSidebar}
+                >
+                  <FaChevronDown
+                    className={`${
+                      open ? styles.closeToggle : styles.openToggle
+                    } ${styles.toggleIcon}`}
+                  />
+                  {open ? "Close" : "Open"} Menu
+                </button>
+              </div>
+              <div className={styles.toggleMenu}>
+                <a href="" className={styles.toggleBtn}><FaRobot/></a>
+              </div>
             </div>
             {children}
           </div>

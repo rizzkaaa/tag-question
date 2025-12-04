@@ -35,14 +35,18 @@
 }
 
 /* TOGGLE OPEN SIDEBAR */
-.toggleMenu {
-  padding: 4;
-  border: 3 solid #e6b325;
+.wrap {
+  display: flex;
   position: absolute;
   top: 25;
   left: 25;
-  border-radius: 23;
   z-index: 999;
+}
+.toggleMenu {
+  margin-inline: 5px;
+  padding: 4;
+  border: 3 solid #e6b325;
+  border-radius: 23;
 }
 .toggleBtn {
   font-size: 20px;
@@ -71,6 +75,11 @@
 .closeToggle {
   padding-top: 3;
   transform: rotate(90deg);
+}
+
+/* BUTTON CHATBOT AI */
+.toggleMenu a {
+  display: inline-block;
 }
 
 /* SIDEBAR */
