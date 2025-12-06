@@ -6,6 +6,7 @@ import {
   FaAngleDoubleDown,
   FaAngleDoubleUp,
   FaPaperPlane,
+  FaChevronDown,
 } from "react-icons/fa";
 
 export default function FormulaPage() {
@@ -195,8 +196,9 @@ export default function FormulaPage() {
                     {q.type[1] == "positive" ? q.type[1] : "negative"} sentence
                     containing the {q.type[0]} verb <i>{q.aux}</i> and the
                     subject <i>{q.subject}</i>, which means the tag question
-                    uses the {q.type[1] == "positive" ? "negative" : q.type[1]} {q.type[0]} verb <i>{q.correct_aux}</i> with
-                    the subject <i>{q.subject}</i>. The result is {" "}
+                    uses the {q.type[1] == "positive" ? "negative" : q.type[1]}{" "}
+                    {q.type[0]} verb <i>{q.correct_aux}</i> with the subject{" "}
+                    <i>{q.subject}</i>. The result is{" "}
                     <u>
                       <i>
                         <b>{q.answer[0]}</b>
@@ -214,6 +216,9 @@ export default function FormulaPage() {
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Auxiliary
+                  <div className={styles.icon}>
+                    <FaChevronDown />
+                  </div>
                 </h1>
               </div>
             </div>
@@ -245,80 +250,3 @@ export default function FormulaPage() {
     </div>
   );
 }
-
-// import { useState } from "react";
-// import { FaPaperPlane, FaAngleDoubleUp } from "react-icons/fa";
-// import styles from "./page.module.css";
-
-// export default function Home() {
-//   const [answers, setAnswers] = useState({});
-//   const [status, setStatus] = useState({});
-
-//   const questions = [
-//     {
-//       id: 1,
-//       question: "Apa fungsi controller di MVC?",
-//       answer: ["controller", "alur", "logika"],
-//     },
-//     {
-//       id: 2,
-//       question: "Jelaskan kegunaan API",
-//       answer: ["data", "komunikasi", "server", "client"],
-//     },
-//   ];
-
-//   const checkAnswer = (q) => {
-//     const userAnswer = answers[q.id]?.toLowerCase().trim();
-
-//     if (!userAnswer) return "kosong";
-
-//     const match = q.answer.some((keyword) =>
-//       userAnswer.includes(keyword.toLowerCase())
-//     );
-
-//     return match ? "benar" : "salah";
-//   };
-
-//   const handleSubmit = (q) => {
-//     const result = checkAnswer(q);
-//     setStatus({
-//       ...status,
-//       [q.id]: result,
-//     });
-//   };
-
-//   return (
-//     <div>
-//       {questions.map((q) => (
-//         <div key={q.id} className={styles.result}>
-//           <p>{q.question}</p>
-
-//           <div className={styles.answerField}>
-//             <input
-//               type="text"
-//               placeholder="Write Your Answer"
-//               // value={answers[q.id] || ""}
-//               onChange={(e) =>
-//                 setAnswers({ ...answers, [q.id]: e.target.value })
-//               }
-//             />
-
-//             <button onClick={() => handleSubmit(q)}>
-//               <FaPaperPlane />
-//             </button>
-//           </div>
-
-//           <p>
-//             {status[q.id] === "benar" && "✅ Correct"}
-//             {status[q.id] === "salah" && "❌ Wrong"}
-//             {status[q.id] === "kosong" && "⚪ Not Answered"}
-//           </p>
-
-//           <div className={styles.icon}>
-//             <FaAngleDoubleUp />
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }

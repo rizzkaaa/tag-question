@@ -15,7 +15,7 @@
 }
 
 .borderBox .text h1 {
-  /* font-size: 35px; */
+  font-size: 25px;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -42,7 +42,6 @@
 }
 .side {
   flex: 1;
-  background-color: red;
   margin-inline: 5px;
 }
 
@@ -147,4 +146,21 @@
 
 .show{
   display: block !important;
+}
+
+
+/* MATERIAL */
+.side:last-child{
+  display: flex;
+  
+}
+.side:last-child .borderBox h1{
+  display: flex;
+  align-items: center;
+}
+.side:last-child .borderBox .icon{
+  margin-inline: 10px;
+}
+.side:last-child .borderBox{
+  max-width: fit-content;
 }
