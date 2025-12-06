@@ -35,6 +35,10 @@ export default function Home({ children }) {
       label: "Formula Tag Question",
       pathName: "/dashboard/formula-tag-question",
     },
+    {
+      label: "Chat Bot",
+      pathName: "/dashboard/chatbot",
+    },
   ];
 
   useEffect(() => {
