@@ -364,16 +364,288 @@ export default function FormulaPage() {
                 <div className={styles.tr}>
                   <div className={` ${styles.th}`}>
                     <div className={styles.text}>
-                      <p className={tenali_Ramakrishna.className}>
-                        Subject
-                      </p>
+                      <p className={tenali_Ramakrishna.className}>Subject</p>
+                    </div>
+                  </div>
+                  <div className={` ${styles.th}`}>
+                    <div className={styles.text}>
+                      <p className={tenali_Ramakrishna.className}>To Be</p>
                     </div>
                   </div>
                   <div className={` ${styles.th}`}>
                     <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
-                        To Be
+                        Tag Question
                       </p>
+                    </div>
+                  </div>
+                </div>
+
+                {table1.map((data, i) => (
+                  <div className={styles.tr} key={i}>
+                    <div className={` ${styles.td}`}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          {data.subject}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={` ${styles.td}`}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          {data.to_be}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={` ${styles.td}`}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          {data.question_tag}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={` ${styles.td}`}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          {data.subject}?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.card}>
+            <button className={styles.borderBox}>
+              <div className={styles.text}>
+                <h1 className={luckiest_Guy.className}>
+                  Formula with Modals
+                  <div className={styles.icon}>
+                    <FaChevronDown />
+                  </div>
+                </h1>
+              </div>
+            </button>
+            <div className={styles.wrap}>
+              <div className={styles.borderBox}>
+                <div className={styles.text}>
+                  <p className={tenali_Ramakrishna.className}>
+                    If the sentence has a modal verb (can, could, may, might,
+                    must, shall, should, will, would), the tag repeats the same
+                    modal.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.formula}>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                </div>
+                <div>
+                  <div className={styles.wrapFormula}>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Negative sentence
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Modal</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Subject?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.wrapFormula}>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Positive sentence
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Modal</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>n't</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Subject?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.wrapExample}>
+                <div className={styles.borderBox}>
+                  <div className={styles.text}>
+                    <p className={tenali_Ramakrishna.className}>Example:</p>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                  <div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          We can't be friends, can we?
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          You would agree, wouldn't you?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className={styles.card}>
+            <button className={styles.borderBox}>
+              <div className={styles.text}>
+                <h1 className={luckiest_Guy.className}>
+                  Formula with Main Verb
+                  <div className={styles.icon}>
+                    <FaChevronDown />
+                  </div>
+                </h1>
+              </div>
+            </button>
+            <div className={styles.wrap}>
+              <div className={styles.borderBox}>
+                <div className={styles.text}>
+                  <p className={tenali_Ramakrishna.className}>
+                    If the main sentence already has an auxiliary verb (is, are,
+                    was, were, have, has, had, etc.), the tag repeats the same
+                    auxiliary.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.formula}>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                </div>
+                <div>
+                  <div className={styles.wrapFormula}>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Negative sentence
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Auxiliary
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Subject?</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.wrapFormula}>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Positive sentence
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Auxiliary
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>n't</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Subject?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.wrapExample}>
+                <div className={styles.borderBox}>
+                  <div className={styles.text}>
+                    <p className={tenali_Ramakrishna.className}>Example:</p>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                  <div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          The moon is beautiful, isn't it?
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          We aren't lost in the memory, are we?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.table}>
+                <div className={styles.tr}>
+                  <div className={` ${styles.th}`}>
+                    <div className={styles.text}>
+                      <p className={tenali_Ramakrishna.className}>Subject</p>
+                    </div>
+                  </div>
+                  <div className={` ${styles.th}`}>
+                    <div className={styles.text}>
+                      <p className={tenali_Ramakrishna.className}>To Be</p>
                     </div>
                   </div>
                   <div className={` ${styles.th}`}>
