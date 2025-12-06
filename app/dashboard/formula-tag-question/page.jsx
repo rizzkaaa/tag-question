@@ -582,11 +582,18 @@ export default function FormulaPage() {
                   <div className={styles.branch}></div>
                 </div>
                 <div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Simple Present Tense
+                        </p>
+                      </div>
+                    </div>
                   <div className={styles.wrapFormula}>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          Negative sentence
+                          Subject
                         </p>
                       </div>
                     </div>
@@ -594,37 +601,14 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          Auxiliary
+                          Verb 1
                         </p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>Subject?</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.wrapFormula}>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Positive sentence
-                        </p>
-                      </div>
-                    </div>
-                    <div className={styles.line}></div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Auxiliary
-                        </p>
-                      </div>
-                    </div>
-                    <div className={styles.line}></div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>n't</p>
+                        <p className={tenali_Ramakrishna.className}>don't/doesn't</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
@@ -650,14 +634,86 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          The moon is beautiful, isn't it?
+                          You cling to your papers and pens, don't you?
                         </p>
                       </div>
                     </div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          We aren't lost in the memory, are we?
+                          He drives alone past your street, doesn't he?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.formula}>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                </div>
+                <div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Simple Past Tense
+                        </p>
+                      </div>
+                    </div>
+                  <div className={styles.wrapFormula}>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Subject
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          Verb 2
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>didn't</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Subject?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.wrapExample}>
+                <div className={styles.borderBox}>
+                  <div className={styles.text}>
+                    <p className={tenali_Ramakrishna.className}>Example:</p>
+                  </div>
+                </div>
+                <div className={styles.line}></div>
+                <div className={styles.wrapBranch}>
+                  <div className={styles.branch}></div>
+                  <div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          She drove through the suburbs, didn't she?
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>
+                          You played dumb but you always knew, didn't you?
                         </p>
                       </div>
                     </div>

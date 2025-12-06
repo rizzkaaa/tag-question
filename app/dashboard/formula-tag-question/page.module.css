@@ -314,10 +314,10 @@
   border-bottom: 5px solid #e6b325;
 }
 
-.card:nth-child(3) .tr:nth-child(2) .td.td:nth-child(2){
+.card:nth-child(3) .tr:nth-child(2) .td.td:nth-child(2) {
   border-radius: 20px 0 0 0;
 }
-.card:nth-child(3) .tr:nth-child(2) .td.td:nth-child(3){
+.card:nth-child(3) .tr:nth-child(2) .td.td:nth-child(3) {
   border-radius: 0 20px 0 0;
 }
 .card:nth-child(3) .tr:last-child .td:nth-child(2) {
@@ -326,3 +326,4 @@
 .card:nth-child(3) .tr:last-child .td:nth-child(3) {
   border-radius: 0 0 20px 0;
 }
+
