@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API;
 const GEMINI_ENDPOINT = process.env.GEMINI_ENDPOINT;
 
 export async function POST(req) {
