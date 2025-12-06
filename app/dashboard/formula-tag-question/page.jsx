@@ -144,6 +144,37 @@ export default function FormulaPage() {
     },
   ];
 
+  const table2 = [
+    {
+      subject: "I",
+      aux: "Don't / Didn't",
+    },
+    {
+      subject: "You",
+      aux: "Don't / Didn't",
+    },
+    {
+      subject: "They",
+      aux: "Don't / Didn't",
+    },
+    {
+      subject: "We",
+      aux: "Don't / Didn't",
+    },
+    {
+      subject: "He",
+      aux: "Doesn't / Didn't",
+    },
+    {
+      subject: "She",
+      aux: "Doesn't / Didn't",
+    },
+    {
+      subject: "It",
+      aux: "Doesn't / Didn't",
+    },
+  ];
+
   const checkAnswer = (q) => {
     const userAnswer = answers[q.id]?.toLowerCase().trim();
 
@@ -525,7 +556,6 @@ export default function FormulaPage() {
             </div>
           </div>
 
-
           <div className={styles.card}>
             <button className={styles.borderBox}>
               <div className={styles.text}>
@@ -541,9 +571,8 @@ export default function FormulaPage() {
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
-                    If the main sentence already has an auxiliary verb (is, are,
-                    was, were, have, has, had, etc.), the tag repeats the same
-                    auxiliary.
+                    If the sentence only has a main verb (like, play, go, eat,
+                    etc.), we use do / does / did in the tag.
                   </p>
                 </div>
               </div>
@@ -645,11 +674,6 @@ export default function FormulaPage() {
                   </div>
                   <div className={` ${styles.th}`}>
                     <div className={styles.text}>
-                      <p className={tenali_Ramakrishna.className}>To Be</p>
-                    </div>
-                  </div>
-                  <div className={` ${styles.th}`}>
-                    <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
                         Tag Question
                       </p>
@@ -657,7 +681,7 @@ export default function FormulaPage() {
                   </div>
                 </div>
 
-                {table1.map((data, i) => (
+                {table2.map((data, i) => (
                   <div className={styles.tr} key={i}>
                     <div className={` ${styles.td}`}>
                       <div className={styles.text}>
@@ -669,14 +693,7 @@ export default function FormulaPage() {
                     <div className={` ${styles.td}`}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          {data.to_be}
-                        </p>
-                      </div>
-                    </div>
-                    <div className={` ${styles.td}`}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          {data.question_tag}
+                          {data.aux}
                         </p>
                       </div>
                     </div>
