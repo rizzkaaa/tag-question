@@ -17,191 +17,192 @@ export default function FormulaPage() {
   const [open3, setOpen3] = useState(false);
 
   const questions = [
-    {
-      id: 1,
-      question: "She is studying in her room, ___?",
-      answer: [
-        "isn&apos;t she",
-        "isn&apos;t she?",
-        "is not she",
-        "is not she?",
-      ],
-      subject: "she",
-      aux: "is",
-      correct_aux: "isn&apos;t",
-      type: ["auxiliary", "positive"],
-    },
-    {
-      id: 2,
-      question: "They are not coming to the party tonight, ___?",
-      answer: ["are they", "are they?"],
-      subject: "they",
-      aux: "are",
-      correct_aux: "are",
-      type: ["auxiliary", "negative"],
-    },
-    {
-      id: 3,
-      question: "He was very tired yesterday, ___?",
-      answer: [
-        "wasn&apos;t he",
-        "wasn&apos;t he?",
-        "was not he",
-        "was not he?",
-      ],
-      subject: "he",
-      aux: "was",
-      correct_aux: "wasn&apos;t",
-      type: ["auxiliary", "positive"],
-    },
-    {
-      id: 4,
-      question: "You haven&apos;t finished your homework, ___?",
-      answer: ["have you", "have you?"],
-      subject: "you",
-      aux: "have",
-      correct_aux: "have",
-      type: ["auxiliary", "negative"],
-    },
-    {
-      id: 5,
-      question: "She likes coffee, ___?",
-      answer: [
-        "doesn&apos;t she",
-        "doesn&apos;t she?",
-        "does not she",
-        "does not she?",
-      ],
-      subject: "she",
-      aux: "does",
-      correct_aux: "doesn&apos;t",
-      type: ["main", "positive"],
-    },
-    {
-      id: 6,
-      question: "They did not play football yesterday, ___?",
-      answer: ["did they", "did they?"],
-      subject: "they",
-      aux: "did",
-      correct_aux: "did",
-      type: ["main", "negative"],
-    },
-    {
-      id: 7,
-      question: "He studies English every day, ___?",
-      answer: [
-        "doesn&apos;t he",
-        "doesn&apos;t he?",
-        "does not he",
-        "does not he?",
-      ],
-      subject: "he",
-      aux: "does",
-      correct_aux: "doesn&apos;t",
-      type: ["main", "positive"],
-    },
-    {
-      id: 8,
-      question: "You cannot swim very well, ___?",
-      answer: ["can you", "can you?"],
-      subject: "you",
-      aux: "can",
-      correct_aux: "can",
-      type: ["modal", "negative"],
-    },
-    {
-      id: 9,
-      question: "She will join us later, ___?",
-      answer: [
-        "won&apos;t she",
-        "won&apos;t she?",
-        "will not she",
-        "will not she?",
-      ],
-      subject: "she",
-      aux: "will",
-      correct_aux: "won&apos;t",
-      type: ["modal", "positive"],
-    },
-    {
-      id: 10,
-      question: "They should not arrive late, ___?",
-      answer: ["should they", "should they?"],
-      subject: "they",
-      aux: "should",
-      correct_aux: "should",
-      type: ["modal", "negative"],
-    },
-  ];
+  {
+    id: 1,
+    question: "She is studying in her room, ___?",
+    answer: [
+      "isn't she",
+      "isn't she?",
+      "is not she",
+      "is not she?",
+    ],
+    subject: "she",
+    aux: "is",
+    correct_aux: "isn't",
+    type: ["auxiliary", "positive"],
+  },
+  {
+    id: 2,
+    question: "They are not coming to the party tonight, ___?",
+    answer: ["are they", "are they?"],
+    subject: "they",
+    aux: "are",
+    correct_aux: "are",
+    type: ["auxiliary", "negative"],
+  },
+  {
+    id: 3,
+    question: "He was very tired yesterday, ___?",
+    answer: [
+      "wasn't he",
+      "wasn't he?",
+      "was not he",
+      "was not he?",
+    ],
+    subject: "he",
+    aux: "was",
+    correct_aux: "wasn't",
+    type: ["auxiliary", "positive"],
+  },
+  {
+    id: 4,
+    question: "You haven't finished your homework, ___?",
+    answer: ["have you", "have you?"],
+    subject: "you",
+    aux: "have",
+    correct_aux: "have",
+    type: ["auxiliary", "negative"],
+  },
+  {
+    id: 5,
+    question: "She likes coffee, ___?",
+    answer: [
+      "doesn't she",
+      "doesn't she?",
+      "does not she",
+      "does not she?",
+    ],
+    subject: "she",
+    aux: "does",
+    correct_aux: "doesn't",
+    type: ["main", "positive"],
+  },
+  {
+    id: 6,
+    question: "They did not play football yesterday, ___?",
+    answer: ["did they", "did they?"],
+    subject: "they",
+    aux: "did",
+    correct_aux: "did",
+    type: ["main", "negative"],
+  },
+  {
+    id: 7,
+    question: "He studies English every day, ___?",
+    answer: [
+      "doesn't he",
+      "doesn't he?",
+      "does not he",
+      "does not he?",
+    ],
+    subject: "he",
+    aux: "does",
+    correct_aux: "doesn't",
+    type: ["main", "positive"],
+  },
+  {
+    id: 8,
+    question: "You cannot swim very well, ___?",
+    answer: ["can you", "can you?"],
+    subject: "you",
+    aux: "can",
+    correct_aux: "can",
+    type: ["modal", "negative"],
+  },
+  {
+    id: 9,
+    question: "She will join us later, ___?",
+    answer: [
+      "won't she",
+      "won't she?",
+      "will not she",
+      "will not she?",
+    ],
+    subject: "she",
+    aux: "will",
+    correct_aux: "won't",
+    type: ["modal", "positive"],
+  },
+  {
+    id: 10,
+    question: "They should not arrive late, ___?",
+    answer: ["should they", "should they?"],
+    subject: "they",
+    aux: "should",
+    correct_aux: "should",
+    type: ["modal", "negative"],
+  },
+];
 
-  const table1 = [
-    {
-      subject: "I",
-      to_be: "Am",
-      question_tag: "Aren&apos;t",
-    },
-    {
-      subject: "You",
-      to_be: "Are / Were",
-      question_tag: "Aren&apos;t / Weren&apos;t",
-    },
-    {
-      subject: "They",
-      to_be: "Are / Were",
-      question_tag: "Aren&apos;t / Weren&apos;t",
-    },
-    {
-      subject: "We",
-      to_be: "Are / Were",
-      question_tag: "Aren&apos;t / Weren&apos;t",
-    },
-    {
-      subject: "He",
-      to_be: "Is / Was",
-      question_tag: "Isn&apos;t / Wasn&apos;t",
-    },
-    {
-      subject: "She",
-      to_be: "Is / Was",
-      question_tag: "Isn&apos;t / Wasn&apos;t",
-    },
-    {
-      subject: "It",
-      to_be: "Is / Was",
-      question_tag: "Isn&apos;t / Wasn&apos;t",
-    },
-  ];
+const table1 = [
+  {
+    subject: "I",
+    to_be: "Am",
+    question_tag: "Aren't",
+  },
+  {
+    subject: "You",
+    to_be: "Are / Were",
+    question_tag: "Aren't / Weren't",
+  },
+  {
+    subject: "They",
+    to_be: "Are / Were",
+    question_tag: "Aren't / Weren't",
+  },
+  {
+    subject: "We",
+    to_be: "Are / Were",
+    question_tag: "Aren't / Weren't",
+  },
+  {
+    subject: "He",
+    to_be: "Is / Was",
+    question_tag: "Isn't / Wasn't",
+  },
+  {
+    subject: "She",
+    to_be: "Is / Was",
+    question_tag: "Isn't / Wasn't",
+  },
+  {
+    subject: "It",
+    to_be: "Is / Was",
+    question_tag: "Isn't / Wasn't",
+  },
+];
 
-  const table2 = [
-    {
-      subject: "I",
-      aux: "Don&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "You",
-      aux: "Don&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "They",
-      aux: "Don&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "We",
-      aux: "Don&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "He",
-      aux: "Doesn&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "She",
-      aux: "Doesn&apos;t / Didn&apos;t",
-    },
-    {
-      subject: "It",
-      aux: "Doesn&apos;t / Didn&apos;t",
-    },
-  ];
+const table2 = [
+  {
+    subject: "I",
+    aux: "Don't / Didn't",
+  },
+  {
+    subject: "You",
+    aux: "Don't / Didn't",
+  },
+  {
+    subject: "They",
+    aux: "Don't / Didn't",
+  },
+  {
+    subject: "We",
+    aux: "Don't / Didn't",
+  },
+  {
+    subject: "He",
+    aux: "Doesn't / Didn't",
+  },
+  {
+    subject: "She",
+    aux: "Doesn't / Didn't",
+  },
+  {
+    subject: "It",
+    aux: "Doesn't / Didn't",
+  },
+];
+
 
   const checkAnswer = (q) => {
     const userAnswer = answers[q.id]?.toLowerCase().trim();
