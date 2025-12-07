@@ -3,9 +3,7 @@ import { useRef, useState } from "react";
 import styles from "./styles.module.css";
 import { tenali_Ramakrishna, luckiest_Guy } from "@/public/font";
 import axios from "axios";
-import {
-  FaReply
-} from "react-icons/fa";
+import { FaReply, FaPaperPlane } from "react-icons/fa";
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([]);
@@ -36,8 +34,9 @@ export default function ChatbotPage() {
       setMessages((prev) => [
         ...prev,
         {
-          text: `⚠️ API Error: ${error.response?.data?.error || error.message || "Tidak diketahui"
-            }`,
+          text: `⚠️ API Error: ${
+            error.response?.data?.error || error.message || "Tidak diketahui"
+          }`,
           sender: "bot",
         },
       ]);
@@ -54,7 +53,9 @@ export default function ChatbotPage() {
       <div className={styles.firstLayer}>
         <div className={styles.chatPage}>
           <div className={styles.header}>
-            <a href="/dashboard" className={styles.backBtn}><FaReply/></a>
+            <a href="/dashboard" className={styles.backBtn}>
+              <FaReply />
+            </a>
             <h3 className={`${luckiest_Guy.className}`}>AskTag AI</h3>
           </div>
 
@@ -62,8 +63,9 @@ export default function ChatbotPage() {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`${styles.message} ${msg.sender === "user" ? styles.user : styles.bot
-                  }`}
+                className={`${styles.message} ${
+                  msg.sender === "user" ? styles.user : styles.bot
+                }`}
               >
                 {msg.text}
               </div>
@@ -81,51 +83,13 @@ export default function ChatbotPage() {
               onKeyDown={handleKey}
             />
             <button className={styles.btnSend} onClick={sendMessage}>
-              Send
+              <FaPaperPlane />
             </button>
           </div>
-
         </div>
-        <div className={styles.gif}>
-
-        </div>
+        <div className={styles.gif}></div>
       </div>
     </div>
-    // </div >
-
-    // <div className={styles.container}>
-    //   <div className={styles.chatBox}>
-    //     <h3 className={`${styles.title} ${tenali_Ramakrishna.className}`}>
-    //       Chat Assistant
-    //     </h3>
-
-    //     <div className={styles.messagesArea}>
-    //       {messages.map((msg, i) => (
-    //         <div
-    //           key={i}
-    //           className={`${styles.message} ${msg.sender === "user" ? styles.user : styles.bot
-    //             }`}
-    //         >
-    //           {msg.text}
-    //         </div>
-    //       ))}
-
-    //       <div ref={messagesEndRef} />
-    //     </div>
-
-    //     <div className={styles.inputArea}>
-    //       <input
-    //         className={`${styles.input} ${tenali_Ramakrishna.className}`}
-    //         placeholder="Type your message..."
-    //         value={input}
-    //         onChange={(e) => setInput(e.target.value)}
-    //         onKeyDown={handleKey}
-    //       />
-    //       <button className={styles.btnSend} onClick={sendMessage}>
-    //         Send
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
+   
   );
 }
