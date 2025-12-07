@@ -11,7 +11,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px 0;
+  padding: 10px 20px 0px;
 }
 
 /* CONTENT */
@@ -23,7 +23,7 @@
   border-radius: 25;
 }
 .borderBox .text {
-  border-radius: 20;
+  border-radius: 20px;
   padding: 15px;
   box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
     inset -3px -3px 3px rgba(138, 150, 168, 0.45);
@@ -52,7 +52,7 @@
   border-top: 5px solid #e6b325;
   transform-origin: bottom;
   transform: scaleY(0);
-  opacity: 0;
+  opacity: 0px;
 
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
 }
@@ -72,7 +72,7 @@
 
 /* ACTION BUTTON */
 .action .btn {
-  border-radius: 20;
+  border-radius: 20px;
   padding: 8px 15px;
   box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
     inset -3px -3px 3px rgba(138, 150, 168, 0.45);
@@ -96,7 +96,7 @@
 .wrap .borderBox,
 .line,
 .branch {
-  opacity: 0;
+  opacity: 0px;
 }
 
 .end {
@@ -114,7 +114,7 @@
 }
 .inactiveLine {
   transform: scaleY(0);
-  opacity: 0;
+  opacity: 0px;
   transition-delay: 0.5s;
 }
 

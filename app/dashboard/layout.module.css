@@ -16,7 +16,7 @@
   background: linear-gradient(45deg, #1a1054, #255ff1);
   width: 95%;
   height: 90%;
-  border-radius: 60;
+  border-radius: 60px;
   box-shadow: inset 5px 5px 5px rgba(163, 177, 198, 0.45),
     inset -5px -5px 5px rgba(138, 150, 168, 0.45);
   display: flex;
@@ -29,7 +29,7 @@
   background-color: white;
   width: 93%;
   height: 80vh;
-  border-radius: 40;
+  border-radius: 40px;
   box-shadow: inset 10px 10px 10px rgba(126, 136, 150, 0.45),
     inset -8px -10px 10px rgba(141, 153, 172, 0.45);
 }
@@ -52,7 +52,7 @@
   font-size: 20px;
   color: white;
   font-weight: bold;
-  border-radius: 20;
+  border-radius: 20px;
   padding: 8px 15px;
   border: none;
   box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
@@ -64,7 +64,7 @@
   line-height: 1;
 }
 .toggleIcon {
-  font-size: 20;
+  font-size: 20px;
   transition: all 0.5s;
   margin-bottom: 5px;
 }
@@ -89,7 +89,7 @@
 }
 .sidebar .secondLayer {
   width: 80%;
-  padding: 20;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,7 +100,7 @@
   border: 3 solid #e6b325;
 }
 .borderMenu .a {
-  font-size: 20;
+  font-size: 20px;
   line-height: 1;
   border-radius: 18;
   width: 100%;
@@ -115,7 +115,7 @@
 }
 .activeMenu {
   border: none;
-  padding: 10;
+  padding: 10px;
   background-color: #e6b325;
   box-shadow: inset 3px 3px 3px rgba(223, 229, 238, 0.45),
     inset -3px -3px 3px rgba(129, 139, 155, 0.45);
@@ -123,8 +123,8 @@
 
 @keyframes openSidebarAnimation {
   0% {
-    width: 0;
-    opacity: 0;
+    width: 0px;
+    opacity: 0px;
   }
   100% {
     width: 27%;
@@ -137,7 +137,7 @@
     opacity: 1;
   }
   100% {
-    width: 0;
-    opacity: 0;
+    width: 0px;
+    opacity: 0px;
   }
 }

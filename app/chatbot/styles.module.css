@@ -11,7 +11,7 @@
   background: linear-gradient(45deg, black, #3533cd);
   width: 95%;
   height: 90%;
-  border-radius: 60;
+  border-radius: 60px;
   box-shadow: inset 5px 5px 5px rgba(163, 177, 198, 0.45),
     inset -5px -5px 5px rgba(138, 150, 168, 0.45);
   display: flex;

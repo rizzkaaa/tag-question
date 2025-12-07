@@ -22,7 +22,7 @@
 }
 .icon {
   color: #e6b325;
-  font-size: 50;
+  font-size: 50px;
 }
 .borderBox {
   transition: all 0.5s;
@@ -32,7 +32,7 @@
   border-radius: 25;
 }
 .borderBox .text {
-  border-radius: 20;
+  border-radius: 20px;
   padding: 15px;
   box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
     inset -3px -3px 3px rgba(138, 150, 168, 0.45);
