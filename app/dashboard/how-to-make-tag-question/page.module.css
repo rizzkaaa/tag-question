@@ -1,9 +1,9 @@
 .borderBox {
   transition: all 0.5s;
-  padding: 4;
-  border: 3 solid #e6b325;
+  padding: 4px;
+  border: 3px solid #e6b325;
   max-width: 320px;
-  border-radius: 25;
+  border-radius: 25px;
 }
 
 .borderBox .text {
@@ -62,8 +62,6 @@
   flex-direction: column;
   flex: 1;
   overflow: auto;
-  /* transform: translate(-200px, -100px); */
-
 }
 
 .content .wrapStart {
