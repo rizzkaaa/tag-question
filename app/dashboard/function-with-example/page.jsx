@@ -41,7 +41,7 @@ export default function FunctionPage() {
           <div className={styles.borderBox}>
             <div className={styles.text}>
               <p className={tenali_Ramakrishna.className}>
-                “This is your book, isn't it?”
+                “This is your book, isn&apos;t it?”
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function FunctionPage() {
           <div className={styles.borderBox}>
             <div className={styles.text}>
               <p className={tenali_Ramakrishna.className}>
-                “It's a nice day, isn't it?”
+                “It&apos;s a nice day, isn&apos;t it?”
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function FunctionPage() {
           <div className={styles.borderBox}>
             <div className={styles.text}>
               <p className={tenali_Ramakrishna.className}>
-                “We should study harder, shouldn't we?”
+                “We should study harder, shouldn&apos;t we?”
               </p>
             </div>
           </div>

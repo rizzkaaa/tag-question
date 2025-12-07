@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaChevronDown, FaRobot } from "react-icons/fa";
 import styles from "./layout.module.css";
 import { usePathname } from "next/navigation";
@@ -13,7 +13,7 @@ export default function Home({ children }) {
     const saved = localStorage.getItem("sidebar");
     return saved === "true";
   });
-  
+
   const menus = [
     {
       label: "Get Started",

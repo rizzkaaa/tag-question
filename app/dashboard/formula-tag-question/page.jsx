@@ -15,16 +15,20 @@ export default function FormulaPage() {
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
-  
 
   const questions = [
     {
       id: 1,
       question: "She is studying in her room, ___?",
-      answer: ["isn't she", "isn't she?", "is not she", "is not she?"],
+      answer: [
+        "isn&apos;t she",
+        "isn&apos;t she?",
+        "is not she",
+        "is not she?",
+      ],
       subject: "she",
       aux: "is",
-      correct_aux: "isn't",
+      correct_aux: "isn&apos;t",
       type: ["auxiliary", "positive"],
     },
     {
@@ -39,15 +43,20 @@ export default function FormulaPage() {
     {
       id: 3,
       question: "He was very tired yesterday, ___?",
-      answer: ["wasn't he", "wasn't he?", "was not he", "was not he?"],
+      answer: [
+        "wasn&apos;t he",
+        "wasn&apos;t he?",
+        "was not he",
+        "was not he?",
+      ],
       subject: "he",
       aux: "was",
-      correct_aux: "wasn't",
+      correct_aux: "wasn&apos;t",
       type: ["auxiliary", "positive"],
     },
     {
       id: 4,
-      question: "You haven't finished your homework, ___?",
+      question: "You haven&apos;t finished your homework, ___?",
       answer: ["have you", "have you?"],
       subject: "you",
       aux: "have",
@@ -57,10 +66,15 @@ export default function FormulaPage() {
     {
       id: 5,
       question: "She likes coffee, ___?",
-      answer: ["doesn't she", "doesn't she?", "does not she", "does not she?"],
+      answer: [
+        "doesn&apos;t she",
+        "doesn&apos;t she?",
+        "does not she",
+        "does not she?",
+      ],
       subject: "she",
       aux: "does",
-      correct_aux: "doesn't",
+      correct_aux: "doesn&apos;t",
       type: ["main", "positive"],
     },
     {
@@ -75,10 +89,15 @@ export default function FormulaPage() {
     {
       id: 7,
       question: "He studies English every day, ___?",
-      answer: ["doesn't he", "doesn't he?", "does not he", "does not he?"],
+      answer: [
+        "doesn&apos;t he",
+        "doesn&apos;t he?",
+        "does not he",
+        "does not he?",
+      ],
       subject: "he",
       aux: "does",
-      correct_aux: "doesn't",
+      correct_aux: "doesn&apos;t",
       type: ["main", "positive"],
     },
     {
@@ -93,10 +112,15 @@ export default function FormulaPage() {
     {
       id: 9,
       question: "She will join us later, ___?",
-      answer: ["won't she", "won't she?", "will not she", "will not she?"],
+      answer: [
+        "won&apos;t she",
+        "won&apos;t she?",
+        "will not she",
+        "will not she?",
+      ],
       subject: "she",
       aux: "will",
-      correct_aux: "won't",
+      correct_aux: "won&apos;t",
       type: ["modal", "positive"],
     },
     {
@@ -114,68 +138,68 @@ export default function FormulaPage() {
     {
       subject: "I",
       to_be: "Am",
-      question_tag: "Aren't",
+      question_tag: "Aren&apos;t",
     },
     {
       subject: "You",
       to_be: "Are / Were",
-      question_tag: "Aren't / Weren't",
+      question_tag: "Aren&apos;t / Weren&apos;t",
     },
     {
       subject: "They",
       to_be: "Are / Were",
-      question_tag: "Aren't / Weren't",
+      question_tag: "Aren&apos;t / Weren&apos;t",
     },
     {
       subject: "We",
       to_be: "Are / Were",
-      question_tag: "Aren't / Weren't",
+      question_tag: "Aren&apos;t / Weren&apos;t",
     },
     {
       subject: "He",
       to_be: "Is / Was",
-      question_tag: "Isn't / Wasn't",
+      question_tag: "Isn&apos;t / Wasn&apos;t",
     },
     {
       subject: "She",
       to_be: "Is / Was",
-      question_tag: "Isn't / Wasn't",
+      question_tag: "Isn&apos;t / Wasn&apos;t",
     },
     {
       subject: "It",
       to_be: "Is / Was",
-      question_tag: "Isn't / Wasn't",
+      question_tag: "Isn&apos;t / Wasn&apos;t",
     },
   ];
 
   const table2 = [
     {
       subject: "I",
-      aux: "Don't / Didn't",
+      aux: "Don&apos;t / Didn&apos;t",
     },
     {
       subject: "You",
-      aux: "Don't / Didn't",
+      aux: "Don&apos;t / Didn&apos;t",
     },
     {
       subject: "They",
-      aux: "Don't / Didn't",
+      aux: "Don&apos;t / Didn&apos;t",
     },
     {
       subject: "We",
-      aux: "Don't / Didn't",
+      aux: "Don&apos;t / Didn&apos;t",
     },
     {
       subject: "He",
-      aux: "Doesn't / Didn't",
+      aux: "Doesn&apos;t / Didn&apos;t",
     },
     {
       subject: "She",
-      aux: "Doesn't / Didn't",
+      aux: "Doesn&apos;t / Didn&apos;t",
     },
     {
       subject: "It",
-      aux: "Doesn't / Didn't",
+      aux: "Doesn&apos;t / Didn&apos;t",
     },
   ];
 
@@ -286,17 +310,20 @@ export default function FormulaPage() {
 
         <div className={styles.side}>
           <div className={styles.card}>
-            <button className={styles.borderBox} onClick={() => setOpen1(!open1)}>
+            <button
+              className={styles.borderBox}
+              onClick={() => setOpen1(!open1)}
+            >
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Auxiliary
-                  <div className={`${styles.icon} ${open1? styles.open : ''}`}>
+                  <div className={`${styles.icon} ${open1 ? styles.open : ""}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={`${styles.wrap} ${open1 ? styles.open : ''}`}>
+            <div className={`${styles.wrap} ${open1 ? styles.open : ""}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
@@ -354,7 +381,7 @@ export default function FormulaPage() {
                     <div className={styles.line}></div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>n't</p>
+                        <p className={tenali_Ramakrishna.className}>n&apos;t</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
@@ -380,14 +407,14 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          The moon is beautiful, isn't it?
+                          The moon is beautiful, isn&apos;t it?
                         </p>
                       </div>
                     </div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          We aren't lost in the memory, are we?
+                          We aren&apos;t lost in the memory, are we?
                         </p>
                       </div>
                     </div>
@@ -453,17 +480,20 @@ export default function FormulaPage() {
           </div>
 
           <div className={styles.card}>
-            <button className={styles.borderBox} onClick={() => setOpen2(!open2)}>
+            <button
+              className={styles.borderBox}
+              onClick={() => setOpen2(!open2)}
+            >
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Modals
-                  <div className={`${styles.icon} ${open2? styles.open : ''}`}>
+                  <div className={`${styles.icon} ${open2 ? styles.open : ""}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={`${styles.wrap} ${open2 ? styles.open : ''}`}>
+            <div className={`${styles.wrap} ${open2 ? styles.open : ""}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
@@ -517,7 +547,7 @@ export default function FormulaPage() {
                     <div className={styles.line}></div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>n't</p>
+                        <p className={tenali_Ramakrishna.className}>n&apos;t</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
@@ -543,14 +573,14 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          We can't be friends, can we?
+                          We can&apos;t be friends, can we?
                         </p>
                       </div>
                     </div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          You would agree, wouldn't you?
+                          You would agree, wouldn&apos;t you?
                         </p>
                       </div>
                     </div>
@@ -561,17 +591,20 @@ export default function FormulaPage() {
           </div>
 
           <div className={styles.card}>
-            <button className={styles.borderBox} onClick={() => setOpen3(!open3)}>
+            <button
+              className={styles.borderBox}
+              onClick={() => setOpen3(!open3)}
+            >
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Main Verb
-                  <div className={`${styles.icon} ${open3? styles.open : ''}`}>
+                  <div className={`${styles.icon} ${open3 ? styles.open : ""}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={`${styles.wrap} ${open3 ? styles.open : ''}`}>
+            <div className={`${styles.wrap} ${open3 ? styles.open : ""}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
@@ -586,33 +619,31 @@ export default function FormulaPage() {
                   <div className={styles.branch}></div>
                 </div>
                 <div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Simple Present Tense
-                        </p>
-                      </div>
+                  <div className={styles.borderBox}>
+                    <div className={styles.text}>
+                      <p className={tenali_Ramakrishna.className}>
+                        Simple Present Tense
+                      </p>
                     </div>
+                  </div>
                   <div className={styles.wrapFormula}>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Subject
-                        </p>
+                        <p className={tenali_Ramakrishna.className}>Subject</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Verb 1</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          Verb 1
+                          don&apos;t/doesn&apos;t
                         </p>
-                      </div>
-                    </div>
-                    <div className={styles.line}></div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>don't/doesn't</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
@@ -638,14 +669,14 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          You cling to your papers and pens, don't you?
+                          You cling to your papers and pens, don&apos;t you?
                         </p>
                       </div>
                     </div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          He drives alone past your street, doesn't he?
+                          He drives alone past your street, doesn&apos;t he?
                         </p>
                       </div>
                     </div>
@@ -658,33 +689,31 @@ export default function FormulaPage() {
                   <div className={styles.branch}></div>
                 </div>
                 <div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Simple Past Tense
-                        </p>
-                      </div>
+                  <div className={styles.borderBox}>
+                    <div className={styles.text}>
+                      <p className={tenali_Ramakrishna.className}>
+                        Simple Past Tense
+                      </p>
                     </div>
+                  </div>
                   <div className={styles.wrapFormula}>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>
-                          Subject
-                        </p>
+                        <p className={tenali_Ramakrishna.className}>Subject</p>
+                      </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.borderBox}>
+                      <div className={styles.text}>
+                        <p className={tenali_Ramakrishna.className}>Verb 2</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          Verb 2
+                          didn&apos;t
                         </p>
-                      </div>
-                    </div>
-                    <div className={styles.line}></div>
-                    <div className={styles.borderBox}>
-                      <div className={styles.text}>
-                        <p className={tenali_Ramakrishna.className}>didn't</p>
                       </div>
                     </div>
                     <div className={styles.line}></div>
@@ -710,14 +739,14 @@ export default function FormulaPage() {
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          She drove through the suburbs, didn't she?
+                          She drove through the suburbs, didn&apos;t she?
                         </p>
                       </div>
                     </div>
                     <div className={styles.borderBox}>
                       <div className={styles.text}>
                         <p className={tenali_Ramakrishna.className}>
-                          You played dumb but you always knew, didn't you?
+                          You played dumb but you always knew, didn&apos;t you?
                         </p>
                       </div>
                     </div>

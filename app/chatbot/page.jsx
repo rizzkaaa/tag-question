@@ -15,7 +15,7 @@ export default function ChatbotPage() {
   async function fetchWelcomeMessage() {
     try {
       const response = await axios.post("/api/ai", {
-        rawText: "" // <— sengaja dikosongkan agar backend mengirim welcome
+        rawText: ""
       });
 
       const welcome = {
@@ -25,6 +25,7 @@ export default function ChatbotPage() {
 
       setMessages([welcome]);
     } catch (error) {
+      console.log(error);
       setMessages([
         {
           text: "⚠️ Gagal memuat pesan selamat datang.",

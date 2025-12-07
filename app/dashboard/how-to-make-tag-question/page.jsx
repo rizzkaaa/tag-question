@@ -111,7 +111,7 @@ export default function HowToMakePage() {
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
-                    Example: You are a student, aren't you?
+                    Example: You are a student, aren&apos;t you?
                   </p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function HowToMakePage() {
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
-                    Example: She isn't here, is she?
+                    Example: She isn&apos;t here, is she?
                   </p>
                 </div>
               </div>
@@ -173,14 +173,14 @@ export default function HowToMakePage() {
                   <div className={styles.borderBox}>
                     <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
-                        They will come, won't they?
+                        They will come, won&apos;t they?
                       </p>
                     </div>
                   </div>
                   <div className={styles.borderBox}>
                     <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
-                        He has finished, hasn't he?
+                        He has finished, hasn&apos;t he?
                       </p>
                     </div>
                   </div>
@@ -215,14 +215,14 @@ export default function HowToMakePage() {
                   <div className={styles.borderBox}>
                     <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
-                        You like coffee, don't you?
+                        You like coffee, don&apos;t you?
                       </p>
                     </div>
                   </div>
                   <div className={styles.borderBox}>
                     <div className={styles.text}>
                       <p className={tenali_Ramakrishna.className}>
-                        She plays piano, doesn't she?
+                        She plays piano, doesn&apos;t she?
                       </p>
                     </div>
                   </div>
