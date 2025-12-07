@@ -35,10 +35,6 @@ export default function Home({ children }) {
       label: "Formula Tag Question",
       pathName: "/dashboard/formula-tag-question",
     },
-    {
-      label: "Chat Bot",
-      pathName: "/dashboard/chatbot",
-    },
   ];
 
   useEffect(() => {
@@ -99,7 +95,7 @@ export default function Home({ children }) {
                 </button>
               </div>
               <div className={styles.toggleMenu}>
-                <a href="" className={styles.toggleBtn}><FaRobot/></a>
+                <a href="/chatbot" className={styles.toggleBtn}><FaRobot/></a>
               </div>
             </div>
             {children}
