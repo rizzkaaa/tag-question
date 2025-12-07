@@ -12,6 +12,10 @@ import {
 export default function FormulaPage() {
   const [answers, setAnswers] = useState({});
   const [status, setStatus] = useState({});
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+  
 
   const questions = [
     {
@@ -282,17 +286,17 @@ export default function FormulaPage() {
 
         <div className={styles.side}>
           <div className={styles.card}>
-            <button className={styles.borderBox}>
+            <button className={styles.borderBox} onClick={() => setOpen1(!open1)}>
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Auxiliary
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${open1? styles.open : ''}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={styles.wrap}>
+            <div className={`${styles.wrap} ${open1 ? styles.open : ''}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
@@ -449,17 +453,17 @@ export default function FormulaPage() {
           </div>
 
           <div className={styles.card}>
-            <button className={styles.borderBox}>
+            <button className={styles.borderBox} onClick={() => setOpen2(!open2)}>
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Modals
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${open2? styles.open : ''}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={styles.wrap}>
+            <div className={`${styles.wrap} ${open2 ? styles.open : ''}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
@@ -557,17 +561,17 @@ export default function FormulaPage() {
           </div>
 
           <div className={styles.card}>
-            <button className={styles.borderBox}>
+            <button className={styles.borderBox} onClick={() => setOpen3(!open3)}>
               <div className={styles.text}>
                 <h1 className={luckiest_Guy.className}>
                   Formula with Main Verb
-                  <div className={styles.icon}>
+                  <div className={`${styles.icon} ${open3? styles.open : ''}`}>
                     <FaChevronDown />
                   </div>
                 </h1>
               </div>
             </button>
-            <div className={styles.wrap}>
+            <div className={`${styles.wrap} ${open3 ? styles.open : ''}`}>
               <div className={styles.borderBox}>
                 <div className={styles.text}>
                   <p className={tenali_Ramakrishna.className}>
