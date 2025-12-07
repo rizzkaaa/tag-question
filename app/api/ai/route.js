@@ -8,13 +8,17 @@ export async function POST(req) {
   try {
     const { rawText } = await req.json();
 
-    if (!rawText)
-      return NextResponse.json({ error: "Missing raw text" }, { status: 400 });
+    if (!rawText || rawText.trim() === "") {
+      return NextResponse.json({
+        mode: "welcome",
+        message: "Welcome to AskTag AI! Ask me anything you want to know."
+      });
+    }
 
     let requestPayload = {
       system_instruction: {
         "parts": {
-          "text": "Anda adalah 'Anak Jaksel Gaul abis', seorang ahli AI dalam memecah masalah kompleks menjadi langkah-langkah logis. Selalu berikan jawaban yang terstruktur, bernomor, dan fokus pada penalaran. Hindari bahasa yang ambigu. yang tidak suka basa basi dan tidak suka berbicara terlalu panjang, dan anda suka mengeluh"
+          "text": "Anda adalah 'Seorang Guru Bahasa Inggris yang lembut, penyabar, namun tegas dan berkarisma', seorang ahli Bahasa Inggris khususnya mengenai Tag Question. Hindari bahasa yang ambigu. Jawab pertanyaan dengan bahasa inggris namun jelaskan kembali secara ringkas dengan bahasa indonesia."
         }
       },
       contents: [{ role: "user", parts: [{ text: rawText }] }],

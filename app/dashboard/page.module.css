@@ -118,7 +118,10 @@
   overflow: hidden;
   margin-bottom: 10px;
 }
-
+.team .cardTeam:nth-child(2) .wrapImage{
+  width: 250px;
+  height: 220px;
+}
 .team .cardTeam p {
   text-align: center;
   font-size: 20px;

@@ -1,14 +1,41 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { tenali_Ramakrishna, luckiest_Guy } from "@/public/font";
 import axios from "axios";
 import { FaReply, FaPaperPlane } from "react-icons/fa";
+import Image from "next/image";
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+  async function fetchWelcomeMessage() {
+    try {
+      const response = await axios.post("/api/ai", {
+        rawText: "" // <— sengaja dikosongkan agar backend mengirim welcome
+      });
+
+      const welcome = {
+        text: response.data?.message || "Welcome! Ask me anything.",
+        sender: "bot",
+      };
+
+      setMessages([welcome]);
+    } catch (error) {
+      setMessages([
+        {
+          text: "⚠️ Gagal memuat pesan selamat datang.",
+          sender: "bot",
+        },
+      ]);
+    }
+  }
+
+  fetchWelcomeMessage();
+}, []);
 
   async function sendMessage() {
     if (!input.trim()) return;
@@ -63,7 +90,7 @@ export default function ChatbotPage() {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`${styles.message} ${
+                className={`${styles.message} ${tenali_Ramakrishna.className} ${
                   msg.sender === "user" ? styles.user : styles.bot
                 }`}
               >
@@ -87,7 +114,12 @@ export default function ChatbotPage() {
             </button>
           </div>
         </div>
-        <div className={styles.gif}></div>
+        <div className={styles.gif}>
+          <Image src="/images/decoration2.png"
+                fill
+                alt="decoration"
+                style={{ objectFit: "contain" }}/>
+        </div>
       </div>
     </div>
    

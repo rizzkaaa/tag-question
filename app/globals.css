@@ -20,3 +20,7 @@
   height: 100%;
   padding-block: 20px;
 }
+
+::-webkit-scrollbar {
+  display: none; 
+}

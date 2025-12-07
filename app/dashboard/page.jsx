@@ -61,7 +61,7 @@ export default function GetStartedPage() {
           <div className={styles.cardTeam}>
             <div className={styles.wrapImage}>
               <Image
-                src="/images/rizka1.jpeg"
+                src="/images/arin.jpeg"
                 fill
                 alt="team"
                 style={{ objectFit: "contain" }}
