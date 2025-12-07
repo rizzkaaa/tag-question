@@ -8,8 +8,12 @@ import { tenali_Ramakrishna } from "../../public/font";
 
 export default function Home({ children }) {
   const path = usePathname();
-  const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const saved = localStorage.getItem("sidebar");
+    return saved === "true";
+  });
+  
   const menus = [
     {
       label: "Get Started",
@@ -36,11 +40,6 @@ export default function Home({ children }) {
       pathName: "/dashboard/formula-tag-question",
     },
   ];
-
-  useEffect(() => {
-    const saved = localStorage.getItem("sidebar");
-    if (saved) setOpen(saved === "true");
-  }, []);
 
   function toggleSidebar() {
     setOpen((prev) => {
@@ -95,7 +94,9 @@ export default function Home({ children }) {
                 </button>
               </div>
               <div className={styles.toggleMenu}>
-                <a href="/chatbot" className={styles.toggleBtn}><FaRobot/></a>
+                <a href="/chatbot" className={styles.toggleBtn}>
+                  <FaRobot />
+                </a>
               </div>
             </div>
             {children}
