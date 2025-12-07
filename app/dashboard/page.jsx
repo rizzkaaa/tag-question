@@ -72,7 +72,7 @@ export default function GetStartedPage() {
           </div>
         </div>
       </div>
-      <footer>
+      <footer className={styles.footer}>
         <div className={styles.logo}>
           <div>
             <p className={luckiest_Guy.className}>Tag</p>
