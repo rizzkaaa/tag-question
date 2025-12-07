@@ -250,6 +250,7 @@ export default function FormulaPage() {
                   <div className={styles.result}>
                     <div className={styles.answerField}>
                       <input
+                      className={tenali_Ramakrishna.className}
                         type="text"
                         placeholder="Write Your Answer"
                         onChange={(e) =>
