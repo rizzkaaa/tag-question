@@ -1,3 +1,6 @@
+.hidden{
+  display: none !important;
+}
 .borderBox {
   transition: all 0.5s;
   padding: 4px;
@@ -100,12 +103,14 @@
   border-bottom: 1px solid #255ff1;
   width: fit-content;
   border-radius: 0 0 8px 0px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .side:first-child input {
-  padding: 5px 10px;
-  font-size: 15px;
+  width: 150px;
+  padding-block: 5px;
+  padding-left: 10px;
+  font-size: 18px;
   border: none;
 }
 
@@ -119,7 +124,7 @@
   border: none;
   border-radius: 8px;
   color: white;
-  font-size: 17;
+  font-size: 17px;
   overflow: hidden;
   transform-origin: right;
   transition: all 0.5s;
@@ -139,7 +144,7 @@
 .side:first-child .result p {
   font-weight: bold;
   line-height: 1.5;
-  font-size: 25px;
+  font-size: 20px;
   display: none;
 }
 
@@ -175,8 +180,10 @@
 
 /* MATERIAL */
 .side:last-child {
+  flex: 2;
   height: 100%;
   overflow-y: auto;
+  margin-left: 50px;
 }
 
 .side:last-child .borderBox h1 {
@@ -188,7 +195,7 @@
   margin-inline: 10px;
   transition: all 0.5s;
 }
-.side:last-child .borderBox .icon.open{
+.side:last-child .borderBox .icon.open {
   transform: rotate(180deg) translateY(10px);
 }
 
@@ -269,6 +276,7 @@
 .wrapExample {
   display: flex;
   align-items: center;
+  overflow-x: auto;
 }
 
 .wrapExample .line {
@@ -279,6 +287,41 @@
 
 .wrapExample .wrapBranch .borderBox {
   margin-block: 15px;
+}
+.wrapExample .wrapMenu {
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapExample p button{
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrapExample .wrapMenu button {
+margin: 5px;
+  border-radius: 10px;
+  color: #1a1054;
+  background-color: white;
+  padding: 8px 10px;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.45),
+    inset -3px -3px 3px rgba(98, 101, 105, 0.45);
+    cursor: pointer;
+  }
+  
+  .wrapExample .wrapMenu button:active {
+  box-shadow: inset 3px 3px 3px rgba(98, 101, 105, 0.45),
+    inset -3px -3px 3px rgba(98, 101, 105, 0.45);
+  transform: scale(1.2);
 }
 
 .table {

@@ -2,14 +2,18 @@
 import { useState } from "react";
 import { luckiest_Guy, tenali_Ramakrishna } from "../../../public/font";
 import styles from "./page.module.css";
-import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import {
+  FaAngleDoubleLeft,
+  FaAngleDoubleRight,
+  FaAngleDoubleDown,
+} from "react-icons/fa";
 
 export default function WhatIsPage() {
   const [index, setIndex] = useState(-1);
 
   return (
     <div className="container">
-      <div className={styles.content}>
+      <div className={`${styles.content} ${index >= 3 ? styles.notShow : ""} `}>
         <div
           className={`${styles.borderBox} ${
             index < 0 ? styles.end : styles.start
@@ -75,18 +79,97 @@ export default function WhatIsPage() {
           </div>
         </div>
       </div>
+
+      <div
+        className={`${styles.content} ${
+          index < 3 ? styles.notShow : styles.show
+        }`}
+      >
+        <div className={`${styles.borderBox} ${styles.title}`}>
+          <div className={styles.text}>
+            <h1 className={luckiest_Guy.className}>Functions with Example</h1>
+          </div>
+        </div>
+
+        <div>
+          <div className={styles.wrap}>
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  Asking for comfirmation
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.icon}`}>
+              <FaAngleDoubleDown />
+            </div>
+
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  “This is your book, isn&apos;t it?”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.wrap}>
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  Engaging the listener
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.icon}`}>
+              <FaAngleDoubleDown />
+            </div>
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  “It&apos;s a nice day, isn&apos;t it?”
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.wrap}>
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  Seeking agreement
+                </p>
+              </div>
+            </div>
+            <div className={`${styles.icon}`}>
+              <FaAngleDoubleDown />
+            </div>
+
+            <div className={styles.borderBox}>
+              <div className={styles.text}>
+                <p className={tenali_Ramakrishna.className}>
+                  “We should study harder, shouldn&apos;t we?”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.action}>
         <button
           className={`${styles.btn} ${tenali_Ramakrishna.className}`}
           onClick={() => setIndex(index - 1)}
           disabled={index < 0}
-          >
+        >
           <FaAngleDoubleLeft /> Prev
         </button>
         <button
           className={`${styles.btn} ${tenali_Ramakrishna.className}`}
           onClick={() => setIndex(index + 1)}
-          disabled={index >= 2}
+          disabled={index >= 3}
         >
           Next <FaAngleDoubleRight />
         </button>

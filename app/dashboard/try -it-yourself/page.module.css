@@ -1,0 +1,137 @@
+.borderBox {
+  transition: all 0.5s;
+  padding: 4px;
+  border: 3px solid #e6b325;
+  max-width: 250px;
+  border-radius: 25px;
+}
+
+.borderBox .text {
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+  transition: all 0.5s;
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+}
+
+.borderBox .text h1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* TITLE */
+.borderBox:not(.wrapBox .borderBox) {
+  max-width: 400px;
+  margin-block: 20px;
+}
+
+/* CONTENT */
+.content {
+  margin-block: 20px;
+  width: 80%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.wrapBox {
+  width: 50%;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapBox .text {
+  display: flex;
+  align-items: center;
+}
+.wrapBox h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+.wrapBox .icon {
+  color: white;
+  font-size: 20px;
+  margin-inline: 8px;
+  transition: all 0.5s;
+}
+.wrapBox .icon.active {
+  transform: rotate(180deg);
+}
+
+.wrapBox p {
+  padding: 20px;
+  padding-left: 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  border-radius: 20px;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45),
+    5px 5px 10px rgba(220, 224, 224, 0.45), 10px 10px 1px #e6b325;
+  transition: all 0.5s;
+}
+.wrapBox p.active {
+  overflow: hidden;
+  animation: active 0.5s forwards;
+}
+@keyframes active {
+  0% {
+    height: 0px;
+    opacity: 0;
+    padding: 0px;
+  }
+  100% {
+    padding: 20px;
+    height: fit-content;
+    opacity: 1;
+  }
+}
+.wrapBox p.inactive {
+  overflow: hidden;
+  animation: inactive 0.5s forwards;
+}
+@keyframes inactive {
+  0% {
+    padding: 20px;
+    height: fit-content;
+    opacity: 1;
+  }
+  100% {
+    padding: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.wrapBox:nth-child(2) {
+  align-self: flex-end;
+  align-items: end;
+}
+.wrapBox:nth-child(2) .text {
+  flex-direction: row-reverse;
+}
+.wrapBox:nth-child(2) p {
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45),
+    -5px 5px 10px rgba(220, 224, 224, 0.45), -10px 10px 1px #e6b325;
+}
+
+.wrapBox:first-child .borderBox {
+  transform: scale(1.3) translate(50px, 30px);
+}
+.wrapBox:nth-child(2) .borderBox {
+  transform: scale(1.2) translateX(-50px);
+}
+.wrapBox:last-child .borderBox {
+  transform: scale(1.3) translate(50px, -30px);
+}
+.borderBox.active {
+  transform: scale(1) translate(0) !important;
+}

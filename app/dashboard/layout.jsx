@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronDown, FaRobot } from "react-icons/fa";
 import styles from "./layout.module.css";
 import { usePathname } from "next/navigation";
@@ -8,11 +8,13 @@ import { tenali_Ramakrishna } from "../../public/font";
 
 export default function Home({ children }) {
   const path = usePathname();
-  const [open, setOpen] = useState(() => {
-    if (typeof window === "undefined") return false;
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
     const saved = localStorage.getItem("sidebar");
-    return saved === "true";
-  });
+    if (saved !== null) {
+      setOpen(saved === "true");
+    }
+  }, []);
 
   const menus = [
     {
@@ -22,10 +24,6 @@ export default function Home({ children }) {
     {
       label: "What Is A Tag Question?",
       pathName: "/dashboard/what-is-a-tag-question",
-    },
-    {
-      label: "Function With Example",
-      pathName: "/dashboard/function-with-example",
     },
     {
       label: "Why Do We Need Tag Question?",
@@ -38,6 +36,14 @@ export default function Home({ children }) {
     {
       label: "Formula Tag Question",
       pathName: "/dashboard/formula-tag-question",
+    },
+    {
+      label: "Try It Yourself",
+      pathName: "/dashboard/try-it-yourself",
+    },
+    {
+      label: "More Video",
+      pathName: "/dashboard/more-video",
     },
   ];
 
