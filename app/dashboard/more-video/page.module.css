@@ -4,6 +4,7 @@
   border: 3px solid #e6b325;
   width: fit-content;
   border-radius: 25px;
+  margin-top: 20px;
 }
 
 .borderBox .text {
@@ -21,17 +22,27 @@
   text-align: center;
   font-weight: bold;
 }
-
+.borderBox + div{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 30px 20px;
+}
 .wrap {
-  /* width: 90%; */
   padding: 20px;
-  margin-left: 30px;
+  margin-block: 30px;
   font-size: 20px;
   line-height: 1;
   border-radius: 20px;
   box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
-    inset -3px -3px 3px rgba(138, 150, 168, 0.45),
-    5px 5px 10px rgba(220, 224, 224, 0.45),
-    -5px 5px 10px rgba(220, 224, 224, 0.45), 10px 10px 1px #e6b325;
+  inset -3px -3px 3px rgba(138, 150, 168, 0.45),
+  5px 5px 10px rgba(220, 224, 224, 0.45),
+  -5px 5px 10px rgba(220, 224, 224, 0.45), 10px 10px 1px #e6b325;
   transition: all 0.5s;
+}
+
+.wrap iframe{
+  border: none;
+  border-radius: 10px;
 }
