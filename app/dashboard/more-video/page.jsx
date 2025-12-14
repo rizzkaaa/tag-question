@@ -1,5 +1,5 @@
 "use client";
-import { luckiest_Guy, tenali_Ramakrishna } from "../../../public/font";
+import { luckiest_Guy } from "../../../public/font";
 import styles from "./page.module.css";
 
 export default function MoreVideo() {

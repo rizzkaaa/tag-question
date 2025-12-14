@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaChevronDown, FaRobot } from "react-icons/fa";
 import styles from "./layout.module.css";
 import { usePathname } from "next/navigation";
@@ -8,13 +8,10 @@ import { tenali_Ramakrishna } from "../../public/font";
 
 export default function Home({ children }) {
   const path = usePathname();
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const saved = localStorage.getItem("sidebar");
-    if (saved !== null) {
-      setOpen(saved === "true");
-    }
-  }, []);
+  const [open, setOpen] = useState(() => {
+  if (typeof window === "undefined") return false;
+  return localStorage.getItem("sidebar") === "true";
+});
 
   const menus = [
     {

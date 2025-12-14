@@ -16,6 +16,7 @@ export default function FormulaPage() {
     open1: false,
     open2: false,
     open3: false,
+    open4: false,
   });
   const [example, setExample] = useState([
     { isChanged: false, subIndex: -1 },
@@ -129,7 +130,7 @@ export default function FormulaPage() {
     },
     {
       subject: "You",
-      to_be: ["Are",  "Were"],
+      to_be: ["Are", "Were"],
       question_tag: ["Aren't", "Weren't"],
     },
     {
@@ -683,7 +684,8 @@ export default function FormulaPage() {
                           >
                             {showExample("can't", 2, "negative", modals)}
                           </button>{" "}
-                          be friends, {showExample("can", 2, "positive", modals)} we?
+                          be friends,{" "}
+                          {showExample("can", 2, "positive", modals)} we?
                         </p>
                         <div
                           className={`${styles.wrapMenu} ${
@@ -712,7 +714,8 @@ export default function FormulaPage() {
                           >
                             {showExample("would", 3, "positive", modals)}
                           </button>{" "}
-                          agree, {showExample("wouldn't", 3, "negative", modals)} you?
+                          agree,{" "}
+                          {showExample("wouldn't", 3, "negative", modals)} you?
                         </p>
                         <div
                           className={`${styles.wrapMenu} ${
@@ -1047,6 +1050,58 @@ export default function FormulaPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.card}>
+            <button
+              className={styles.borderBox}
+              onClick={() => toggleOpen("open4")}
+            >
+              <div className={styles.text}>
+                <h1 className={luckiest_Guy.className}>
+                  Special Case
+                  <div
+                    className={`${styles.icon} ${
+                      open.open4 ? styles.open : ""
+                    }`}
+                  >
+                    <FaChevronDown />
+                  </div>
+                </h1>
+              </div>
+            </button>
+            <div className={`${styles.wrap} ${open.open4 ? styles.open : ""}`}>
+              <div className={styles.borderBox}>
+                <div className={styles.text}>
+                  <p className={tenali_Ramakrishna.className}>
+                    If the subject is “I am (I&apos;m)”, then the correct question
+                    tag is “aren&apos;t I?” However, if the subject is “I am not (I&apos;m
+                    not)”, the question tag should be “am I?”
+                  </p>
+                </div>
+              </div>
+              <br />
+              <div className={styles.borderBox}>
+                <div className={styles.text}>
+                  <p className={tenali_Ramakrishna.className}>
+                    For plural nouns, and for words ending in -one (such as
+                    someone, everyone, no one) or -body (such as somebody,
+                    everybody, nobody), we use the pronoun “they” in the
+                    question tag, and the tag usually becomes “aren&apos;t they?”
+                  </p>
+                </div>
+              </div>
+              <br />
+              <div className={styles.borderBox}>
+                <div className={styles.text}>
+                  <p className={tenali_Ramakrishna.className}>
+                    For words with a negative meaning, such as nobody, no one,
+                    never, the question tag must be positive. For example: No
+                    one hates you, do they?
+                  </p>
+                </div>
               </div>
             </div>
           </div>
