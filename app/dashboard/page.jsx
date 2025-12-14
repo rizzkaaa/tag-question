@@ -19,6 +19,7 @@ export default function GetStartedPage() {
                 style={{ objectFit: "contain" }}
               />
             </div>
+            <p className={luckiest_Guy.className}>Verse</p>
           </div>
           <p className={luckiest_Guy.className}>QUESTION</p>
         </div>
@@ -49,7 +50,7 @@ export default function GetStartedPage() {
           <div className={styles.cardTeam}>
             <div className={styles.wrapImage}>
               <Image
-                src="/images/rizka1.jpeg"
+                src="/images/rizka.jpeg"
                 fill
                 alt="team"
                 style={{ objectFit: "contain" }}

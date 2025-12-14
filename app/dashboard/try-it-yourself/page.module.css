@@ -1,0 +1,153 @@
+.borderBox {
+  transition: all 0.5s;
+  padding: 4px;
+  border: 3px solid #e6b325;
+  border-radius: 25px;
+}
+
+.borderBox .text {
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+  transition: all 0.5s;
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+}
+
+.borderBox .text h1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.borderBox .text p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  padding-block: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 20px;
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45),
+    -5px 5px 10px rgba(220, 224, 224, 0.45), -10px 10px 1px #e6b325;
+  transition: all 0.5s;
+}
+
+.wrap:nth-child(2) .answerField {
+  display: flex;
+  border-bottom: 1px solid #255ff1;
+  border-radius: 0 0 8px 0;
+  width: 70%;
+}
+.wrap:nth-child(2) input {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 20px;
+  border: none;
+  line-height: 1;
+}
+
+.wrap:nth-child(2) input:focus {
+  outline: none;
+}
+
+.wrap:nth-child(2) button {
+  background: linear-gradient(45deg, #1a1054, #255ff1);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 17px;
+  overflow: hidden;
+  transform-origin: right;
+  transition: all 0.5s;
+  transform: scaleX(1);
+  box-shadow: inset 3px 3px 3px rgba(163, 177, 198, 0.45),
+    inset -3px -3px 3px rgba(138, 150, 168, 0.45);
+}
+
+.wrap:nth-child(2) button:active {
+  background: #255ff1;
+}
+
+.wrap:nth-child(2) button.inactive {
+  transform: scaleX(0);
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result {
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.result .wrapStructure {
+  flex: 1;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+.result .wrapStructure .branch {
+  width: 30px;
+  height: 110px;
+  border: 5px solid #e6b325;
+  border-right: none;
+}
+
+.result .borderBox {
+  margin-block: 20px;
+}
+.result h1 {
+  font-size: 18px !important;
+}
+
+.result .wrap {
+  flex: 2;
+}
+
+.tag {
+  display: flex;
+  margin-top: 20px;
+}
+.tag p {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.correct {
+  color: rgb(25, 216, 25);
+}
+.wrong {
+  color: red;
+}
+
+
+.tag + p {
+  width: 80%;
+  text-align: justify;
+  margin-top: 20px;
+}
+.result .wrap .borderBox{
+  width: 50%;
+}

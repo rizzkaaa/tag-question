@@ -11,20 +11,25 @@
   margin: 20px;
 }
 
+.header .logo{
+  height: 250px;
+}
+
 /* HEADER LOGO */
 .logo div:first-child {
   display: flex;
   align-items: flex-end;
-  transform: translateX(-50px);
 }
-.logo p:first-child {
-  font-size: 130px;
+.logo p:first-child,
+.logo .wrapImage + p{
+  font-size: 130px !important;
   padding: 0px;
   margin: 0px;
   transform: translateY(30px);
 }
 .logo p:last-child {
   font-size: 100px;
+  text-align: center;
 }
 .logo p {
   background: linear-gradient(45deg, #1a1054, #255ff1);
@@ -35,6 +40,9 @@
 .logo .wrapImage {
   width: 160px;
   height: 200px;
+}
+.logo .wrapImage + p{
+    transform: translate(-50px, 30px);
 }
 
 /* HEADER BUTTON */
